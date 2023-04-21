@@ -75,13 +75,11 @@ function img() {
 }
 
 // Do Javascript Stuff 
-function javascript() {
+function js() {
     return gulp.src(paths.js)
         .pipe(maps.init())
         .pipe(jsImport({hideConsole: false}))
         .pipe(concat('scripts.js'))
-        .pipe(uglify())
-        .pipe(rename('scripts.min.js'))
         .pipe(maps.write('./'))
         .pipe(gulp.dest(dest + '/js'))
         .pipe(browserSync.stream());
@@ -91,6 +89,7 @@ function javascript() {
 function watchFiles() {
     gulp.watch(src + '/sass/**', css);
     gulp.watch(src + '/html/**', html);
+    gulp.watch(src + '/js/**', js);
 }
 
 // Run a server 
@@ -106,7 +105,7 @@ function server() {
 }
 
 // Complex tasks
-const dev = gulp.parallel(html, css, fonts, img, server);
+const dev = gulp.parallel(html, css, js, fonts, img, server);
 const build = gulp.series(html, css, fonts, img);
 
 // Export tasks

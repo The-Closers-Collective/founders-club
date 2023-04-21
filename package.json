@@ -1,0 +1,37 @@
+{
+  "name": "1337Hero's Gulp Static Starter Workflow",
+  "version": "2.0.0",
+  "description": "Installer Package for Gulp workflow",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "1337hero",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://github.com/1337hero/gulp-starter/blob/master/readme.md",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "browser-sync": "^2.28.3",
+    "cssnano": "^5.1.15",
+    "gulp": "^4.0.2",
+    "gulp-changed": "^4.0.3",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-gzip": "^1.4.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-inject-partials": "^1.0.5",
+    "gulp-js-import": "^1.0.6",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1",
+    "gulp-webp": "^4.0.1",
+    "gulp-webpcss": "^1.1.1",
+    "sass": "^1.59.2"
+  },
+  "keywords": []
+}

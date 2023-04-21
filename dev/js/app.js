@@ -53,9 +53,9 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-document.getElementById("contactForm").addEventListener("submit", async function (event) {
+document.getElementById("contactForm").addEventListener("submit", async function(event) {
   event.preventDefault();
-
+  
   const nameInput = document.getElementById("fullName");
   const emailInput = document.getElementById("emailAddress");
   const submitButton = document.getElementById("submitButton");
@@ -72,23 +72,14 @@ document.getElementById("contactForm").addEventListener("submit", async function
   }
 
   // Prepare form data
-  const formData = {
-    contact: {
-      email: emailInput.value,
-      firstName: nameInput.value,
-    },
-  };
+  const formData = new FormData(event.target);
 
   // Submit the form via POST
   try {
-    const response = await fetch("https://icloseevent.api-us1.com/api/3/contacts", {
+    submitButton.disabled = true;
+    const response = await fetch("https://icloseevent.activehosted.com/proc.php", {
       method: "POST",
-      headers: {
-        accept: "application/json",
-        "content-type": "application/json",
-        "api-token": "5b22b0d74e1094651f8355143a0ab063a549efa299a183cfe476e24430aed0d37d08d606",
-      },
-      body: JSON.stringify(formData),
+      body: formData,
     });
 
     if (response.ok) {

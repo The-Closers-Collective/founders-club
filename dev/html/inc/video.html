@@ -1,0 +1,14 @@
+<section class="SectionComponent hero section is-block is-relative is-light is-medium" id="about">
+    <div class="VideoSection__container container" data-aos="fade-up" data-aos-delay="500">
+        <header class="SectionHeader has-text-centered extra-margin">
+            <h2 class="title has-text-weight-bold is-3 is-spaced">{{ videoTitle }}</h2>
+            <div><p>{{ videoParagraph }}</p></div>
+        </header>
+
+        <video data-object-fit="cover" controls playsinline preload="auto" class="video-banner preload" width="1280" height="720">
+                <source src="{{ webmsource }}" type="video/webm">
+                <source src="{{ mp4source }}" type="video/mp4">Your browser does not support HTML5 video.
+        </video>
+
+    </div>
+</section>

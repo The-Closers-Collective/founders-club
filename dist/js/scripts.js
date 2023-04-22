@@ -1,3 +1,12 @@
+// Brag Machine!
+function prettyConsoleLog(message, backgroundColor = '#01adc3', textColor = '#FFFFFF') {
+  const style = `background: ${backgroundColor}; color: ${textColor}; padding: 5px; border-radius: 3px; font-weight: bold;`;
+  console.log(`%c${message}`, style);
+}
+
+prettyConsoleLog('🚀 This site was built by 1337Hero!');
+
+
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
@@ -43,53 +52,6 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
-
-// document.getElementById("contactForm").addEventListener("submit", async function(event) {
-//   event.preventDefault();
-  
-//   const nameInput = document.getElementById("fullName");
-//   const emailInput = document.getElementById("emailAddress");
-//   const submitButton = document.getElementById("submitButton");
-//   const successMessage = document.getElementById("submitSuccessMessage");
-//   const errorMessage = document.getElementById("submitErrorMessage");
-
-//   // Validate email
-//   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-//   if (!emailRegex.test(emailInput.value)) {
-//     emailInput.setCustomValidity("Email is not valid.");
-//     return;
-//   } else {
-//     emailInput.setCustomValidity("");
-//   }
-
-//   // Prepare form data
-//   const formData = new FormData(event.target);
-
-//   // Submit the form via POST
-//   try {
-//     submitButton.disabled = true;
-//     const response = await fetch("https://icloseevent.activehosted.com/proc.php", {
-//       method: "POST",
-//       body: formData,
-//     });
-
-//     if (response.ok) {
-//       // Show success message
-//       successMessage.classList.remove("d-none");
-//       errorMessage.classList.add("d-none");
-//     } else {
-//       // Show error message
-//       successMessage.classList.add("d-none");
-//       errorMessage.classList.remove("d-none");
-//     }
-//   } catch (error) {
-//     // Show error message
-//     successMessage.classList.add("d-none");
-//     errorMessage.classList.remove("d-none");
-//   } finally {
-//     submitButton.disabled = false;
-//   }
-// });
 
 
 window.cfields = [];

@@ -9,7 +9,6 @@
   "author": "1337hero",
   "license": "GPL-3.0-or-later",
   "homepage": "https://github.com/1337hero/gulp-starter/blob/master/readme.md",
-  "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^10.4.14",
     "browser-sync": "^2.28.3",
@@ -24,6 +23,7 @@
     "gulp-js-import": "^1.0.6",
     "gulp-nunjucks-render": "^2.2.3",
     "gulp-postcss": "^9.0.1",
+    "gulp-purgecss": "^5.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",

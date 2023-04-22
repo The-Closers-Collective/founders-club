@@ -8,6 +8,7 @@ const gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     partials = require('gulp-inject-partials'),
     jsImport = require('gulp-js-import'),
+    purgecss = require('gulp-purgecss'),
     cssnano = require('cssnano'),
     htmlmin = require('gulp-htmlmin'),
     postcss = require('gulp-postcss'),
@@ -55,7 +56,7 @@ function html() {
         .pipe(nunjucksRender({data: config}))
         .pipe(htmlmin({
             collapseWhitespace: true,
-            removeComments: true
+            removeComments: false
         }))
         .pipe(gulp.dest(dest))
         .pipe(browserSync.stream());
@@ -103,6 +104,19 @@ function server() {
     watchFiles(); // Move watchFiles() here to avoid running it twice
     browserSync.watch(dest + '/**/*.*').on('change', browserSync.reload);
 }
+
+function purgecssRejected() {
+    return gulp.src('dev/sass/*.scss')
+        .pipe(rename({
+            suffix: '.rejected'
+        }))
+        .pipe(purgecss({
+            content: ['dev/html/*.html'],
+        }))
+        .pipe(gulp.dest('build/css'));
+}
+
+gulp.task('purgecss-rejected', gulp.series(purgecssRejected));
 
 // Complex tasks
 const dev = gulp.parallel(html, css, js, fonts, img, server);

@@ -1,0 +1,72 @@
+.projects-section {
+    padding: 5rem 0;
+
+    @media (min-width: 992px) {
+        padding: 10rem 0;
+    }
+
+    .featured-text {
+        padding: 2rem;
+        @media (min-width: 992px) {
+            padding: 0 0 0 2rem;
+            border-left: 0.5rem solid #01ADC3;
+        }
+    }
+
+    .project-text {
+        padding: 3rem;
+        font-size: 90%;
+
+        @media (min-width: 992px) {
+            padding: 5rem;
+        }
+    }
+}
+
+.signup-section {
+    padding: 5rem 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%), url("../img/footer-private-jet.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  
+    .form-signup input {
+        box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+        padding: 1.25rem 2rem;
+        height: auto;
+        font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-size: 80%;
+        text-transform: uppercase;
+        letter-spacing: 0.15rem;
+        border: 0;
+    }
+}
+
+.contact-section {
+    padding-top: 5rem;
+  
+    .social {
+        margin-top: 5rem;
+    
+        a {
+            text-align: center;
+            height: 3rem;
+            width: 3rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 100%;
+            line-height: 3rem;
+            color: rgba(255, 255, 255, 0.3);
+            &:hover {
+                color: rgba(255, 255, 255, 0.5);
+            }
+            &:active {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.footer {
+    padding: 5rem 0;
+}
